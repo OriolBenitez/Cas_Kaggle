@@ -9,5 +9,8 @@ The dataset consists of round snapshots from about 700 demos from high level tou
 
 The information that has been substracted from this 700 demos every 20 seconds are 97 attributes; 3 are categorical strings, 94 are numerical data.
 
+### Objectives:
 
+The main objective is to train some supervised models in order to predict the team(Terrorist or Counter-Terrorist) who is going to win the round.
 
+### Exploring the Data
