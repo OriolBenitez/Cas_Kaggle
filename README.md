@@ -15,8 +15,51 @@ The main objective is to train some supervised models in order to predict the te
 
 ### Exploring the Data
 
+In order to have a better performance, there have been created some new features using the ones given. After having added those new features, we can have a look at the correlation of the round winner with the other variables.
+![countplot](https://github.com/OriolBenitez/Cas_Kaggle/blob/main/pictures/histogram.png)
+
+As the round winner is the variable that has to be predicted, a problem would be that the variable was unbalanced, so we can analyze that.
+![correlation](https://github.com/OriolBenitez/Cas_Kaggle/blob/main/pictures/correlations.png)
+
+A game of CS:GO can be played at differents maps, the map to play is commonly decided(picking and banning) by the both teams, at the past there were maps called ct-sided, that means that there were so many more rounds won by the Counter-Terrorist, at the pre-processing stage we will know if the map is an important variable to predict who wins the round.
+
+![countplot_per_map](https://github.com/OriolBenitez/Cas_Kaggle/blob/main/pictures/histogram_per_map.png)
+
+(Cache has so few rounds played because it was only played during a showmatch)
+
+### Preprocessing
+
+Some features have been removed, all of them were guns that have not been used. 
+
+*  Feature scaling: Standardization
+
+The given data is not standarized, once applied different models with both types of data (standarized and non-standarized), the results have showed that the models with standarized data get a better accuracy and are also faster.
+
+*  Feature-selection
+
+After delating the features that didn't give any information the dataset is conformed by 90 features. As I did not wanted yo select a specific number of features to use, after doing a simple model with each feature and getting its accuracy, the features that are going to be selected are the ones that have the accuracy above the mean of accuracies. 
+
+
+(PCA's have not shown good results, so it will not be applied)
+
+### Models
+The models that will be applied are:
+
+* Logistic
+
+* Random Forest
+
+* LGBM
+
+* CatBoost
+
+* XGBoost
+
+* Decission Tree
 
 ### Results
+The hyperparameter search has been done applying a RandomSearch using parallelism(8 threads)
+
 | Method         | Data used | Accuracy           | Hyperparameters                                                                                                                                                       | Time(seconds) | Number of iterations |
 |----------------|-----------|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------|
 | Logistic       | 33%       | 0.7523895106608938 | {'solver': 'newton-cg', 'penalty': 'l2', 'C': 0.0003138337860695424}                                                                                                  | 1140          | 100                  |
@@ -31,3 +74,4 @@ The main objective is to train some supervised models in order to predict the te
 | XGBoost        | 100%      | 0.8095123657852987 | {'colsample_bytree': 0.7012362120853994, 'gamma': 3.543969952820899, 'max_depth': 15, 'min_child_weight': 7.0, 'reg_alpha': 109.0, 'reg_lambda': 0.35977544396941163} | 2003          | 100                  |
 | Decission Tree | 33%       | 0.7991994118127604 | {'min_samples_leaf': 2, 'max_depth': None}                                                                                                                            | 304           | 100                  |
 | Decission Tree | 100%      | 0.7362688830352703 | {'min_samples_leaf': 3, 'max_depth': None}                                                                                                                            | 1800          | 100                  |
+### Demo
