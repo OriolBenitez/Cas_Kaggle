@@ -1,0 +1,14 @@
+Python packages required:
+
+ - Sklearn
+ - numpy
+ - pandas
+ - seaborn
+ - plotly*
+ - tqdm*
+ - hyperopt
+ - pickle
+ - scipy.stats
+ - xgboost
+ - random
+ - math
