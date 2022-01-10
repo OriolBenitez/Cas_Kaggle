@@ -60,7 +60,7 @@ The models that will be applied are:
 * Decission Tree
 
 ### Results
-The hyperparameter search has been done applying a RandomSearch using parallelism(8 threads)
+The hyperparameter search has been done applying a RandomSearch using parallelism(8 threads) and Cross-Validation(10 splits)
 
 | Method         | Data used | Accuracy           | Hyperparameters                                                                                                                                                       | Time(seconds) | Number of iterations |
 |----------------|-----------|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------|
