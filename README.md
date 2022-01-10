@@ -92,6 +92,8 @@ We can see some confussion matrices
 ![Image 3](https://github.com/OriolBenitez/Cas_Kaggle/blob/main/pictures/cm_dt.png?raw=true)
 
 ### Demo
+First, download the data from [Kaggle](https://www.kaggle.com/christianlillelund/csgo-round-winner-classification) and copy it to the data folder
+
 If you want to train a model or look-up for Hyperparameters, at the console(being at the demo directory), run:
 ```
 python training_models.py
