@@ -113,4 +113,4 @@ After all the analysis and the results obtained, the following conclusions can b
 
 * Implement some kind of neural network to make predictions.
 
-* Use classes to use the models instead of using the similirar functions I use.
+* Apply classes to use the models instead of using the similar functions I use.
